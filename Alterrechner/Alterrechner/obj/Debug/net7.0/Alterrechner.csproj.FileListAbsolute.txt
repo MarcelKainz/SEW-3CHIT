@@ -1,0 +1,15 @@
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\bin\Debug\net7.0\Alterrechner.exe
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\bin\Debug\net7.0\Alterrechner.deps.json
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\bin\Debug\net7.0\Alterrechner.runtimeconfig.json
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\bin\Debug\net7.0\Alterrechner.dll
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\bin\Debug\net7.0\Alterrechner.pdb
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.csproj.AssemblyReference.cache
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.AssemblyInfoInputs.cache
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.AssemblyInfo.cs
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.csproj.CoreCompileInputs.cache
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.dll
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\refint\Alterrechner.dll
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.pdb
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\Alterrechner.genruntimeconfig.cache
+C:\Users\kainz\RiderProjects\Alterrechner\Alterrechner\obj\Debug\net7.0\ref\Alterrechner.dll
