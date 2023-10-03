@@ -2,8 +2,9 @@
 
 int age;
 int year = DateTime.Now.Year;
-int birthyear = 2008;
+int birthyear;
 Console.WriteLine("Wann bist du geboren (Jahr)");
-Console.Read();
+birthyear = Console.Read();
 age = year - birthyear;
+Console.WriteLine(year);
 Console.WriteLine(age);
