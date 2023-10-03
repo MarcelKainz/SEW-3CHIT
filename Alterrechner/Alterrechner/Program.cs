@@ -6,5 +6,4 @@ int birthyear;
 Console.WriteLine("Wann bist du geboren (Jahr)");
 birthyear = Console.Read();
 age = year - birthyear;
-Console.WriteLine(year);
 Console.WriteLine(age);
