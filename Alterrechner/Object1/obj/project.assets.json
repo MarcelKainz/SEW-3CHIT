@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kainz\\RiderProjects\\Alterrechner\\Alterrechner\\Alterrechner.csproj",
-      "projectName": "Alterrechner",
-      "projectPath": "C:\\Users\\kainz\\RiderProjects\\Alterrechner\\Alterrechner\\Alterrechner.csproj",
+      "projectUniqueName": "C:\\Users\\kainz\\RiderProjects\\Alterrechner\\Object1\\Object1.csproj",
+      "projectName": "Object1",
+      "projectPath": "C:\\Users\\kainz\\RiderProjects\\Alterrechner\\Object1\\Object1.csproj",
       "packagesPath": "C:\\Users\\kainz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kainz\\RiderProjects\\Alterrechner\\Alterrechner\\obj\\",
+      "outputPath": "C:\\Users\\kainz\\RiderProjects\\Alterrechner\\Object1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kainz\\AppData\\Roaming\\NuGet\\NuGet.Config"
