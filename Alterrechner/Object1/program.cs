@@ -1,4 +1,4 @@
-﻿using P_2023_10_Person;
+﻿namespace P_2023_10_Person;
 
 Person p = new Person("Susi", "Meier");
 
