@@ -1,0 +1,14 @@
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.AssemblyInfoInputs.cache
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.AssemblyInfo.cs
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.csproj.CoreCompileInputs.cache
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\bin\Debug\net8.0\Maturaverwaltung.exe
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\bin\Debug\net8.0\Maturaverwaltung.deps.json
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\bin\Debug\net8.0\Maturaverwaltung.runtimeconfig.json
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\bin\Debug\net8.0\Maturaverwaltung.dll
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\bin\Debug\net8.0\Maturaverwaltung.pdb
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.dll
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\refint\Maturaverwaltung.dll
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.pdb
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\Maturaverwaltung.genruntimeconfig.cache
+C:\Users\kainz\RiderProjects\Maturaverwaltung\Maturaverwaltung\obj\Debug\net8.0\ref\Maturaverwaltung.dll

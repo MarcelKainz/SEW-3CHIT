@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Maturaverwaltung/1.0.0": {
+        "runtime": {
+          "Maturaverwaltung.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Maturaverwaltung/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
