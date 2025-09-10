@@ -2,7 +2,27 @@
 
 class Konto
 {
+    public string Bezeichnung {get; set;}
+
+    public void Abheben()
+    {
+        
+    }
     
 }
 
-class 
+public abstract class Kunde
+{
+    
+}
+
+public class Privatkunde : Kunde
+{
+    public string VorName{get; set;}
+    public string NachName { get; set; }
+}
+
+public class Geschäftskunde : Kunde
+{
+    public string FirmName { get; set; }
+}
