@@ -3,10 +3,19 @@
 class Konto
 {
     public string Bezeichnung {get; set;}
+    public int Betrag { get; set; }
 
-    public void Abheben()
+    public Konto(int betrag)
     {
-        
+        Betrag = betrag;
+    }
+    
+    public void Abheben(int betrag)
+    {
+        if (stand <= betrag)
+        {
+            
+        }
     }
     
 }
