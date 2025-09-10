@@ -3,18 +3,21 @@
 class Konto
 {
     public string Bezeichnung {get; set;}
-    public int Betrag { get; set; }
+    public int? Betrag { get; set; }
+    public int Stand { get; set; }
 
-    public Konto(int betrag)
+    public Konto(int stand)
     {
-        Betrag = betrag;
+        Betrag = null;
+        Stand = stand;
     }
     
     public void Abheben(int betrag)
     {
-        if (stand <= betrag)
+        if (Stand >= betrag)
         {
-            
+            Stand -= betrag;
+            Console.WriteLine($"Es wurde {betrag} vom Konto abgehoben. Der neue Kontostand beträgt {Stand}");
         }
     }
     
@@ -34,4 +37,14 @@ public class Privatkunde : Kunde
 public class Geschäftskunde : Kunde
 {
     public string FirmName { get; set; }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Konto konto1 = new Konto(200);
+        
+        konto1.Abheben(150);
+    }
 }
