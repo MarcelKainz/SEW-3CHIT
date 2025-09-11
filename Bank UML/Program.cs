@@ -11,6 +11,12 @@ class Konto
         Betrag = null;
         Stand = stand;
     }
+    public void Einzahlen(int betrag)
+    {
+        Stand += betrag;
+        
+        Console.WriteLine($"Der Kontostand beträgt nun {Stand}!");
+    }
     
     public void Abheben(int betrag)
     {
@@ -23,7 +29,6 @@ class Konto
         else
         {
             Console.WriteLine($"Der Kontostand ist zu gering. Sie können maximal {Stand} abheben!");
-            Console.WriteLine($"{betrag}, {Stand}");
         }
     }
     
@@ -52,5 +57,6 @@ public class Program
         Konto konto1 = new Konto(200);
         
         konto1.Abheben(150);
+        konto1.Einzahlen(290);
     }
 }
