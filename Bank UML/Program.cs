@@ -4,7 +4,7 @@ class Konto
 {
     public string Bezeichnung {get; set;}
     public int? Betrag { get; set; }
-    public int Stand { get; set; }
+    public int? Stand { get; set; }
 
     public Konto(int stand)
     {
@@ -18,6 +18,12 @@ class Konto
         {
             Stand -= betrag;
             Console.WriteLine($"Es wurde {betrag} vom Konto abgehoben. Der neue Kontostand beträgt {Stand}");
+        }
+        
+        else
+        {
+            Console.WriteLine($"Der Kontostand ist zu gering. Sie können maximal {Stand} abheben!");
+            Console.WriteLine($"{betrag}, {Stand}");
         }
     }
     
