@@ -1,14 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-class Konto
+class Konto(int i)
 {
     public string description;
     public decimal? balance; //Euro
-    List<Customer> _myCust = new List<Customer>;
+    List<Customer> _myCust = new List<Customer>();
 
     public decimal Balance
     {
-        get{return balance;}
+        get{return (decimal)balance;}
     }
     
     public void deposit(decimal amount)
@@ -39,18 +39,18 @@ class Konto
     
 }
 
-public abstract class Kunde
+public abstract class Customer
 {
     
 }
 
-public class Privatkunde : Kunde
+public class PrivateCustomer : Customer
 {
     public string VorName{get; set;}
     public string NachName { get; set; }
 }
 
-public class Geschäftskunde : Kunde
+public class BusinessCustomer : Customer
 {
     public string FirmName { get; set; }
 }
@@ -61,7 +61,7 @@ public class Program
     {
         Konto konto1 = new Konto(200);
         
-        konto1.Abheben(150);
-        konto1.Einzahlen(290);
+        konto1.withdraw(150);
+        konto1.deposit(290);
     }
 }
