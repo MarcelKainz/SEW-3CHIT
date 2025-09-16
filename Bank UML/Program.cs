@@ -2,33 +2,38 @@
 
 class Konto
 {
-    public string Bezeichnung {get; set;}
-    public int? Betrag { get; set; }
-    public int? Stand { get; set; }
+    public string description;
+    public decimal? balance; //Euro
+    List<Customer> _myCust = new List<Customer>;
 
-    public Konto(int stand)
+    public decimal Balance
     {
-        Betrag = null;
-        Stand = stand;
-    }
-    public void Einzahlen(int betrag)
-    {
-        Stand += betrag;
-        
-        Console.WriteLine($"Der Kontostand beträgt nun {Stand}!");
+        get{return balance;}
     }
     
-    public void Abheben(int betrag)
+    public void deposit(decimal amount)
     {
-        if (Stand >= betrag)
+        if (amount < 0)
         {
-            Stand -= betrag;
-            Console.WriteLine($"Es wurde {betrag} vom Konto abgehoben. Der neue Kontostand beträgt {Stand}");
+            balance += amount;
+            Console.WriteLine($"Es wurde {amount} dem Konto hinzugefügt. Der neue Kontostand beträgt {balance}");
+            
+        }
+        else
+            throw new Exception("Bitte hebe Geld ab");
+    }
+    
+    public void withdraw(decimal amount)
+    {
+        if (balance >= amount && amount > 0)
+        {
+            balance -= amount;
+            Console.WriteLine($"Es wurde {amount} vom Konto abgehoben. Der neue Kontostand beträgt {balance}");
         }
         
         else
         {
-            Console.WriteLine($"Der Kontostand ist zu gering. Sie können maximal {Stand} abheben!");
+            Console.WriteLine($"Der Kontostand ist zu gering. Sie können maximal {balance} abheben!");
         }
     }
     
