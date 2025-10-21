@@ -7,3 +7,5 @@ Singleton.Singleton s = Singleton.Singleton.Instance;
 Singleton_2 s2 = Singleton_2.GetInstance();
 
 Console.WriteLine("Hello World!");
+
+//

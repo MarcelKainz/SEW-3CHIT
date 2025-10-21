@@ -35,3 +35,5 @@ public class Tests
         Assert.That(BrunosImbiss.mahlzeit.GetType().Equals(typeof(Bratwurst)));
     }
 }
+
+// Easter Egg for Macho :)

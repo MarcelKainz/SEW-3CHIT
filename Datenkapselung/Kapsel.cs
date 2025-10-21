@@ -7,6 +7,8 @@ public class Kapsel
     private string inhalt1;
     private string inhalt2;
     
+    //
+    
     //Schnittstelle für Zugriff auf Inhalt!
     public string Inhalt1
     {

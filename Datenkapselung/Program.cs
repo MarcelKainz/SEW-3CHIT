@@ -12,4 +12,6 @@ Console.WriteLine(k.Inhalt1);   //Getter
 k.SetInhalt2("Immernoch Egal");     //Set Methode
 Console.WriteLine(k.GetInhalt2);    //Get Methode
 
+//
+
 Console.ReadKey();

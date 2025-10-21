@@ -10,6 +10,8 @@ public abstract class Restaurant
         Console.WriteLine("Ihre Bestellung bitte!");
     }
 
+    //
+    
     protected virtual void MahlzeitServieren()
     {
         Console.WriteLine("Hier ihre Mahlzeit. Guten Appetit!");

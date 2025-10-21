@@ -16,3 +16,4 @@ public sealed class Singleton_2
     return instance;
     }
 }
+//
