@@ -55,4 +55,3 @@ public class Kaffeehaus : Restaurant
         mahlzeit = new Kaffee("Apfelstrudel");
     }
 }
-// Copyright Keinrath
