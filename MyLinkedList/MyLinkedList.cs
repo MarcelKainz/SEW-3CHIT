@@ -28,6 +28,33 @@ public class MyLinkedList
         }
     }
 
+    public void Remove(int value)
+    {
+        if (Head == null)
+            return;
+
+        if (Head.Value == value)
+        {
+            Head = Head.Next;
+            return;
+        }
+
+        MyElement tmp = Head;
+        MyElement current = Head.Next;
+        while (current != null)
+        {
+            if (current.Value == value)
+            {
+                tmp.Next = current.Next;
+                return;
+            }
+
+            tmp = current;
+            current = current.Next;
+        }
+    }
+    
+    
     public override string ToString()
     {
         return Head.ToString();
