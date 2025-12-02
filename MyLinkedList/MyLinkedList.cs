@@ -59,6 +59,50 @@ public class MyLinkedList
         }
     }
     
+    public void AddBefore(int tgV, int nV)
+    {
+        MyElement tmp = Head;
+
+        if (Head == null)
+            return;
+
+        if (Head.Value == tgV)
+        {
+            AddFirst(nV);
+            return;
+        }
+
+        while (tmp.Next != null && tmp.Next.Value != tgV)
+        {
+            tmp = tmp.Next;
+        }
+
+        if (tmp.Next != null)
+        {
+            MyElement newElement = new MyElement { Value = nV };
+            newElement.Next = tmp.Next;
+            tmp.Next = newElement;
+            Count++;
+        }
+    }
+    
+    public void AddAfter(int tgv, int newValue)
+    {
+        MyElement tmp = Head;
+
+        while (tmp != null && tmp.Value != tgv)
+        {
+            tmp = tmp.Next;
+        }
+
+        if (tmp != null)
+        {
+            MyElement newElement = new MyElement { Value = newValue };
+            newElement.Next = tmp.Next;
+            tmp.Next = newElement;
+            Count++;
+        }
+    }
     
     public override string ToString()
     {

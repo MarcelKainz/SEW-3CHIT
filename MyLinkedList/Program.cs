@@ -16,3 +16,8 @@ Console.WriteLine(ml);
 ml.Remove(99);
 Console.WriteLine(ml);
 
+ml.AddBefore(44, 55);
+Console.WriteLine(ml);
+
+ml.AddAfter(55, 66);
+Console.WriteLine(ml);
