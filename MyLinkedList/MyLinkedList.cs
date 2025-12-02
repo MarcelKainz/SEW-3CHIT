@@ -90,6 +90,16 @@ public class MyLinkedList
     {
         MyElement tmp = Head;
 
+        if (tmp == null)
+        {
+            throw new Exception("Empty list - cannot add after");
+        }
+
+        if (tgv == null)
+        {
+            throw new Exception("Empty Element - cannot add after");
+        }
+        
         while (tmp != null && tmp.Value != tgv)
         {
             tmp = tmp.Next;
@@ -101,6 +111,11 @@ public class MyLinkedList
             newElement.Next = tmp.Next;
             tmp.Next = newElement;
             Count++;
+        }
+
+        else
+        {
+            throw new Exception("Target value not found - cannot add after");
         }
     }
     
