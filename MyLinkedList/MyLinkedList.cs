@@ -119,6 +119,20 @@ public class MyLinkedList
         }
     }
     
+    public MyElement Find(int value)
+    {
+        MyElement tmp = Head;
+
+        while (tmp != null)
+        {
+            if (tmp.Value == value)
+                return tmp;
+            tmp = tmp.Next;
+        }
+
+        return null;
+    }
+    
     public override string ToString()
     {
         return $"{Count} Elements: ->" + Head.ToString();
