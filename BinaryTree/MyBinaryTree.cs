@@ -165,5 +165,7 @@ public class MyBinaryTree<T> where T : IComparable<T>
     {
         while (node.Left != null) node = node.Left;
         return node;
+        
+        
     }
 }

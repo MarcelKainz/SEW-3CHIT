@@ -9,3 +9,5 @@ public class MyNode<T>
     public MyNode<T> Left { get; set; }
     public MyNode<T> Right { get; set; }
 }
+
+
