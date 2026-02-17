@@ -1,52 +1,78 @@
-﻿namespace DoubleLinkedList;
+﻿using System.Text;
+using DoubleLinkedList;
 
-public class DoubleLinkedList
+public class DoubleLinkedList<T> : IComparable<T> where T : IComparable<T>
 {
-    public Node Head { get; set; }
-    public Node Tail { get; set; }
+    public Node<T> Head { get; set; }
+    public Node<T> Tail { get; set; }
     public int Count { get; private set; }
     
-    public void AddFirst(int value)
+    public void AddFirst(T value)
     {
-        Node newNode = new Node { Value = value };
+        Node<T> newNode = new Node<T> { Value = value };
+        Count++;
+    
         if (Head == null)
         {
             Head = newNode;
             Tail = newNode;
+            return;
         }
-        else
-        {
-            newNode.Next = Head;
-            Head.Previous = newNode;
-            Head = newNode;
-        }
-        Count++;
+    
+        newNode.Next = Head;
+        Head.Previous = newNode; // Den alten Head rückwärts verbinden
+        Head = newNode;
     }
     
     
-    public void AddLast(int value)
+    public void AddLast(T value)
     {
-        Node newNode = new Node { Value = value };
+        Node<T> newNode = new Node<T> { Value = value };
+        Count++;
+
         if (Tail == null)
         {
             Head = newNode;
             Tail = newNode;
+            return;
         }
-        else
-        {
-            Tail.Next = newNode;
-            newNode.Previous = Tail;
-            Tail = newNode;
-        }
-        Count++;
+
+        Tail.Next = newNode;     // Den alten Tail nach vorne verbinden
+        newNode.Previous = Tail; // Den neuen Knoten nach hinten verbinden
+        Tail = newNode;          // Tail-Zeiger aktualisieren
     }
     
-    public void Remove(int value)
+    
+    public Node<T> Find (T value)
     {
-        Node current = Head;
+        Node<T> tmp = Head;
+        if (tmp == null)
+        {
+            return null;
+        }
+
+        while (tmp != null)
+        {
+            object o = new object();
+            o.Equals(value);
+                
+            if (tmp.Value.Equals(value))
+                return tmp;
+            if (tmp.Value.CompareTo(value) == 0)
+            {
+                tmp = tmp.Next;
+            }
+        }
+
+        return tmp;
+    }
+    
+    public void Remove(T value)
+    {
+        Node<T> current = Head;
         while (current != null)
         {
-            if (current.Value == value)
+            if (current.Value.CompareTo(value) == 0)
             {
                 if (current.Previous != null)
                 {
@@ -71,5 +97,34 @@ public class DoubleLinkedList
             }
             current = current.Next;
         }
+    }
+
+    public int CompareTo(T? other) 
+    {
+        throw new NotImplementedException();
+    }
+    
+    
+    public override string ToString()
+    {
+        /*if (Head == null)
+        {
+            return "Liste ist leer.";
+        }
+
+        // Wir nutzen den Node-eigenen ToString Mechanismus (rekursiv)
+        return Head.ToString();*/
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"{Count} Elemente, Head: ->");
+        
+        Node<T> tmp = Head;
+        while (tmp.Next != null)<a3
+        {
+            sb.Append($"{tmp.Value}");
+            if(tmp.Next != null) sb.Append($" <--> ");
+            tmp = tmp.Next;
+        }
+        sb.Append($" <-Tail");
+        return sb.ToString();
     }
 }

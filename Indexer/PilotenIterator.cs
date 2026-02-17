@@ -16,6 +16,7 @@ public class PilotenIterator:IEnumerator
     public bool MoveNext()
     {
         //_current_position++;
+        // bewegt sich weiter, zum nächsten nicht-leeren Element
         while (_current_position < _data.Lenght && (_data[_current_position] != null))
             _current_position++;
         return _current_position < _data.Lenght;
