@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Text;
 
-namespace ScottConsolenAnwendung2._1;
+namespace DBScott;
 using MySqlConnector;
 
 public class DBAccess
@@ -37,10 +37,14 @@ public class DBAccess
         using (MySqlConnection mc = new MySqlConnection(connectionString))
         {
             mc.Open();
-            MySqlCommand cmd = new MySqlCommand($"Insert into depts values ({deptno}, '{dname}', '{loc}')", mc);
-            cmd.Parameters.Add("deptno", DbType.Int32).Value = deptno;
-            cmd.Parameters.Add("dbname", DbType.String).Value = dname;
-            cmd.Parameters.Add("loc", DbType.Int32).Value = loc;
+
+            MySqlCommand cmd = new MySqlCommand(
+                "INSERT INTO depts (deptno, dname, loc) VALUES (@deptno, @dname, @loc)", mc);
+
+            cmd.Parameters.AddWithValue("@deptno", deptno);
+            cmd.Parameters.AddWithValue("@dname", dname);
+            cmd.Parameters.AddWithValue("@loc", loc);
+
             cmd.ExecuteNonQuery();
         }
     }
@@ -93,5 +97,34 @@ public class DBAccess
         Console.WriteLine("------------------------------");
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("");
+    }
+
+    public bool SaveDept(int deptno, string dname, string loc)
+    {
+        using (MySqlConnection mc = new MySqlConnection(connectionString))
+        {
+            mc.Open();
+
+            // Prüfen ob Datensatz existiert
+            MySqlCommand checkCmd = new MySqlCommand(
+                "SELECT COUNT(*) FROM depts WHERE deptno = @deptno", mc);
+
+            checkCmd.Parameters.AddWithValue("@deptno", deptno);
+
+            int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+            if (count > 0)
+            {
+                // UPDATE
+                UpdateDept(deptno, dname, loc);
+            }
+            else
+            {
+                // INSERT
+                CreateDept(deptno, dname, loc);
+            }
+
+            return true;
+        }
     }
 }
