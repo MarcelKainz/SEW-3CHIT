@@ -1,0 +1,50 @@
+﻿@page "/departments"
+@namespace DBScott
+
+<PageTitle>Departments</PageTitle>
+
+<h1>Scott Departments</h1>
+
+<p>Here are the departments in Scott's company:</p>
+
+@if (departments == null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Acion</th>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>LOC</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var dept in departments) 
+        {
+            string href = "/departments/edit/" + dept.DEPTNO;
+            <tr>
+                <td><a href=@href>Edit</a></td>
+                <td>@dept.DEPTNO</td>
+                <td>@dept.DNAME</td>
+                <td>@dept.LOC</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code
+{
+    private List<Dept> departments;
+    BetterDBAccess db = new BetterDBAccess();
+
+    protected override void OnInitialized()
+    {
+        departments = db.GetAllDepts();
+    }
+}

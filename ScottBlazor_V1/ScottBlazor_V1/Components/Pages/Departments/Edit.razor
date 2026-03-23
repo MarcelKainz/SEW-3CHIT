@@ -1,0 +1,63 @@
+﻿@page "/departments/edit/{id:int}"
+@using DBScott
+@inject NavigationManager NavManager
+
+<h3>Edit</h3>
+
+@if (selected == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <EditForm Model="selected" OnValidSubmit="Save" FormName="Hansi" Enhance>
+        <input type="hidden" name="selected.DEPTNO" value="@selected.DEPTNO" />
+        <div>
+            <label>
+                <InputText @bind-Value="selected.DNAME"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                <InputText @bind-Value="selected.LOC"/>
+            </label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    
+    BetterDBAccess db = new BetterDBAccess();
+    [SupplyParameterFromForm]
+    Dept selected { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrEmpty(selected.DNAME))
+        {
+            Dept data = db.GetDept(Id);
+            if (data != null)
+            {
+                selected = data;
+            }
+        }
+        else
+        {
+            string x = "scho doda";
+        }
+    }
+    
+    private void Save()
+    {
+        db.UpdateDept(selected);
+        NavManager.NavigateTo("/departments");
+        //nav.NavigateTo("/departments");
+    }
+}
