@@ -97,9 +97,14 @@ public class BettestDBAccess
 
             MySqlCommand cmd = new MySqlCommand(
                 @"UPDATE emps 
-              SET ENAME=@ename, JOB=@job, ParentID=@ParentID, HIREDATE=@hiredate, 
-                  SAL=@sal, COMM=@comm, DEPTID=@DEPTID 
-              WHERE ID=@ID", mc);
+            SET ENAME=@ename, 
+                JOB=@job, 
+                parent_id=@ParentID, 
+                hiredate=@hiredate, 
+                sal=@sal, 
+                comm=@comm, 
+                dept_id=@DEPTID 
+            WHERE ID=@ID", mc);
             
             
             if (string.IsNullOrWhiteSpace(emp.ENAME))

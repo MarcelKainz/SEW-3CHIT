@@ -50,7 +50,11 @@
 </EditForm>
 
 @code {
+    [Parameter]
+    public int Id { get; set; }
+    
     BettestDBAccess db = new BettestDBAccess();
+    [SupplyParameterFromForm]
     Emp selected { get; set; } = new();
 
     private void Create2()

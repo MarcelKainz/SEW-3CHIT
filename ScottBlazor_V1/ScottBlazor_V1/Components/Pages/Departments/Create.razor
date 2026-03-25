@@ -27,7 +27,11 @@
 </EditForm>
 
 @code {
+    [Parameter]
+    public int Id { get; set; }
+    
     BetterDBAccess db = new BetterDBAccess();
+    [SupplyParameterFromForm]
     Dept selected { get; set; } = new();
 
     private void Create2()

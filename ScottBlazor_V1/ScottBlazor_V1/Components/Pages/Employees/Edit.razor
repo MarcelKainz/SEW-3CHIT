@@ -6,18 +6,14 @@
 
 @if (selected == null)
 {
-    <p><em>Loading...</em></p>
+    <p>
+        <em>Loading...</em>
+    </p>
 }
 else
 {
     <EditForm Model="selected" OnValidSubmit="Save" FormName="EmpEditForm" Enhance>
-        <DataAnnotationsValidator />
-        <ValidationSummary />
-
-        <div>
-            <label>Emp No:</label>
-            <InputNumber @bind-Value="selected.ID" disabled />
-        </div>
+        <input type="hidden" name="selected.ID" value="@selected.ID" />
 
         <div>
             <label>Name:</label>
@@ -54,21 +50,28 @@ else
             <InputNumber @bind-Value="selected.DEPTID" />
         </div>
 
-        <button type="submit">Save</button>
+        <button type="submit">Submit</button>
     </EditForm>
 }
 
 @code {
     [Parameter]
-    public int id { get; set; }
-
+    public int Id { get; set; }
+    
     BettestDBAccess db = new BettestDBAccess();
-    Emp selected { get; set; }
+    [SupplyParameterFromForm]
+    Emp selected { get; set; } = new();
 
     protected override void OnInitialized()
     {
-        // Employee aus DB laden
-        selected = db.GetEmp(id);
+        if (string.IsNullOrEmpty(selected.ENAME))
+        {
+            Emp data = db.GetEmp(Id);
+            if (data != null)
+            {
+                selected = data;
+            }
+        }
     }
 
     private void Save()
