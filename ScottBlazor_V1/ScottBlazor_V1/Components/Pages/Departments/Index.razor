@@ -1,5 +1,5 @@
 ﻿@page "/departments"
-@namespace DBScott
+@using DBScott
 
 <PageTitle>Departments</PageTitle>
 
@@ -34,6 +34,10 @@ else
                 <td>@dept.LOC</td>
             </tr>
         }
+        @code{
+            string href = "/departments/create/";
+        }
+        <button><a href=@href>Create</a></button>
         </tbody>
     </table>
 }

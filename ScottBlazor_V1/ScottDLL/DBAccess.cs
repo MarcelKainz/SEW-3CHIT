@@ -1,4 +1,4 @@
-﻿using System.Data;
+﻿/*using System.Data;
 using System.Text;
 
 namespace DBScott;
@@ -11,24 +11,28 @@ public class DBAccess
     //Server=myServerAddress;Database=myDataBase;uid=myUsername;Pwd=myPassword;
 
     //root = "quick and dirty" - normalerweise anderer User
-    string connectionString = "Server=localhost;Database=scottnew;Uid=root;Pwd=insy;";
+    string connectionString = "Server=localhost;Database=scottnew;Uid=root;Pwd=root;";
 
-    public string GetAllDepts()
+    public List<Dept> GetAllDepts()
     {
         using (MySqlConnection mc = new MySqlConnection(connectionString))
         {
             mc.Open();
             MySqlCommand cmd = new MySqlCommand("Select * from depts", mc);
             MySqlDataReader reader = cmd.ExecuteReader();
+            List<Dept> depts = new List<Dept>();
             Console.WriteLine($"{reader.FieldCount} Columns\n");
-            StringBuilder sb = new StringBuilder();
             while (reader.Read())
             {
-                sb.Append($"{reader.GetInt32(0)} " +
-                                  $"{reader.GetString(1)} " +
-                                  $"{reader.GetString(2)} \n");
+                depts.Add(new Dept
+                {
+                    DEPTNO = reader.GetInt32(0),
+                    DNAME = reader.GetString(1),
+                    LOC = reader.GetString(2)
+                });
+
             }
-            return sb.ToString();
+            return depts;
         }
     }
     
@@ -54,42 +58,49 @@ public class DBAccess
         using (MySqlConnection mc = new MySqlConnection(connectionString))
         {
             mc.Open();
-            MySqlCommand cmd = new MySqlCommand($"Delete from depts where deptno = {deptno}", mc);
-            cmd.Parameters.Add("deptno", DbType.Int32).Value = deptno;
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM depts WHERE deptno = @deptno", mc);
+            cmd.Parameters.AddWithValue("@deptno", deptno); // Sicher gegen SQL-Injection
             cmd.ExecuteNonQuery();
         }
     }
     
-    public string ReadDept(int deptno)
+    public Dept ReadDept(int deptno)
     {
         using (MySqlConnection mc = new MySqlConnection(connectionString))
         {
             mc.Open();
             MySqlCommand cmd = new MySqlCommand($"Select * from depts where deptno = {deptno}", mc);
             MySqlDataReader reader = cmd.ExecuteReader();
-            StringBuilder sb = new StringBuilder();
+            Dept depts = new Dept();
+            Console.WriteLine($"{reader.FieldCount} Columns\n");
             while (reader.Read())
             {
-                sb.Append($"{reader.GetInt32(0)} " +
-                                  $"{reader.GetString(1)} " +
-                                  $"{reader.GetString(2)} \n");
+                depts.(new Dept
+                {
+                    DEPTNO = reader.GetInt32(0),
+                    DNAME = reader.GetString(1),
+                    LOC = reader.GetString(2)
+                });
+
             }
-            return sb.ToString();
+            return depts;
         }
     }
     
     public void UpdateDept(int deptno, string dname, string loc)
-    {
-        using (MySqlConnection mc = new MySqlConnection(connectionString))
-        {
-            mc.Open();
-            MySqlCommand cmd = new MySqlCommand($"Update depts set dname = '{dname}', loc = '{loc}' where deptno = {deptno}", mc);
-            cmd.Parameters.Add("deptno", DbType.Int32).Value = deptno;
-            cmd.Parameters.Add("dbname", DbType.String).Value = dname;
-            cmd.Parameters.Add("loc", DbType.Int32).Value = loc;
-            cmd.ExecuteNonQuery();
-        }
-    }
+     {
+         using (MySqlConnection mc = new MySqlConnection(connectionString))
+         {
+             mc.Open();
+             MySqlCommand cmd = new MySqlCommand(
+                 "UPDATE depts SET dname = @dname, loc = @loc WHERE deptno = @deptno", mc);
+             
+             cmd.Parameters.AddWithValue("@deptno", deptno);
+             cmd.Parameters.AddWithValue("@dname", dname);
+             cmd.Parameters.AddWithValue("@loc", loc);
+             cmd.ExecuteNonQuery();
+         }
+     }
 
     public void ColorText()
     {
@@ -127,4 +138,4 @@ public class DBAccess
             return true;
         }
     }
-}
+}*/

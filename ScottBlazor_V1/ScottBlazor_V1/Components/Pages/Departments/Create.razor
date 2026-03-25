@@ -1,0 +1,39 @@
+﻿@page "/departments/create"
+@using DBScott
+@inject NavigationManager NavManager
+
+<h3>Create</h3>
+
+<EditForm Model="selected" OnValidSubmit="Create2" FormName="DeptCreateForm" Enhance>
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>DeptNo:</label>
+        <InputNumber @bind-Value="selected.DEPTNO" />
+    </div>
+
+    <div>
+        <label>DNAME:</label>
+        <InputText @bind-Value="selected.DNAME" />
+    </div>
+
+    <div>
+        <label>LOC:</label>
+        <InputText @bind-Value="selected.LOC" />
+    </div>
+
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code {
+    BetterDBAccess db = new BetterDBAccess();
+    Dept selected { get; set; } = new();
+
+    private void Create2()
+    {
+        Console.WriteLine(selected.DNAME); // 👈 prüfen!
+        db.CreateDept(selected);
+        NavManager.NavigateTo("/departments");
+    }
+}

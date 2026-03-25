@@ -1,0 +1,79 @@
+﻿@page "/employees/edit/{id:int}"
+@using DBScott
+@inject NavigationManager NavManager
+
+<h3>Edit Employee</h3>
+
+@if (selected == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <EditForm Model="selected" OnValidSubmit="Save" FormName="EmpEditForm" Enhance>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div>
+            <label>Emp No:</label>
+            <InputNumber @bind-Value="selected.ID" disabled />
+        </div>
+
+        <div>
+            <label>Name:</label>
+            <InputText @bind-Value="selected.ENAME" />
+        </div>
+
+        <div>
+            <label>Job:</label>
+            <InputText @bind-Value="selected.JOB" />
+        </div>
+
+        <div>
+            <label>Manager (optional):</label>
+            <InputNumber @bind-Value="selected.ParentID" />
+        </div>
+
+        <div>
+            <label>Hire Date:</label>
+            <InputDate @bind-Value="selected.HIREDATE" />
+        </div>
+
+        <div>
+            <label>Salary:</label>
+            <InputNumber @bind-Value="selected.SAL" step="0.01" />
+        </div>
+
+        <div>
+            <label>Commission (optional):</label>
+            <InputNumber @bind-Value="selected.COMM" step="0.01" />
+        </div>
+
+        <div>
+            <label>Dept No:</label>
+            <InputNumber @bind-Value="selected.DEPTID" />
+        </div>
+
+        <button type="submit">Save</button>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    BettestDBAccess db = new BettestDBAccess();
+    Emp selected { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Employee aus DB laden
+        selected = db.GetEmp(id);
+    }
+
+    private void Save()
+    {
+        db.UpdateEmp(selected);
+        NavManager.NavigateTo("/employees");
+    }
+}
