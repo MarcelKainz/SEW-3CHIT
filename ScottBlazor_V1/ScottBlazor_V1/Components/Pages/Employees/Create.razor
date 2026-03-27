@@ -4,44 +4,45 @@
 
 <h3>Create Employee</h3>
 
+
 <EditForm Model="selected" OnValidSubmit="Create2" FormName="EmpCreateForm" Enhance>
 
-    <div>
+    <div class="form-group">
         <label>Emp No:</label>
         <InputNumber @bind-Value="selected.ID" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Name:</label>
         <InputText @bind-Value="selected.ENAME" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Job:</label>
         <InputText @bind-Value="selected.JOB" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Manager (optional):</label>
         <InputNumber @bind-Value="selected.ParentID" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Hire Date:</label>
         <InputDate @bind-Value="selected.HIREDATE" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Salary:</label>
         <InputNumber @bind-Value="selected.SAL" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Commission (optional):</label>
         <InputNumber @bind-Value="selected.COMM" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>Dept No:</label>
         <InputNumber @bind-Value="selected.DEPTID" />
     </div>
@@ -59,7 +60,6 @@
 
     private void Create2()
     {
-        Console.WriteLine(selected.ENAME); // Debug
         db.CreateEmp(selected);
         NavManager.NavigateTo("/employees");
     }

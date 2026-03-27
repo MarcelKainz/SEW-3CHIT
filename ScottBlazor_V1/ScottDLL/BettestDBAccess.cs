@@ -25,7 +25,7 @@ public class BettestDBAccess
                     ENAME = reader.GetString(1),
                     JOB = reader.GetString(2),
                     ParentID = reader.IsDBNull(3) ? null : reader.GetInt32(3),
-                    HIREDATE = reader.GetDateTime(4),
+                    HIREDATE = reader.GetDateOnly(4),
                     SAL = reader.GetInt32(5),
                     COMM = reader.IsDBNull(6) ? null : reader.GetInt32(6),
                     DEPTID = reader.GetInt32(7)
@@ -56,7 +56,7 @@ public class BettestDBAccess
                     ENAME = reader.GetString(1),
                     JOB = reader.GetString(2),
                     ParentID = reader.IsDBNull(3) ? null : reader.GetInt32(3),
-                    HIREDATE = reader.GetDateTime(4),
+                    HIREDATE = reader.GetDateOnly(4),
                     SAL = reader.GetInt32(5),
                     COMM = reader.IsDBNull(6) ? null : reader.GetInt32(6),
                     DEPTID = reader.GetInt32(7)

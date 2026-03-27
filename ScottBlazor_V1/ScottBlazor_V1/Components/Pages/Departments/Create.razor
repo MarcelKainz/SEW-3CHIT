@@ -4,21 +4,22 @@
 
 <h3>Create</h3>
 
+
 <EditForm Model="selected" OnValidSubmit="Create2" FormName="DeptCreateForm" Enhance>
     <DataAnnotationsValidator />
     <ValidationSummary />
 
-    <div>
+    <div class="form-group">
         <label>DeptNo:</label>
         <InputNumber @bind-Value="selected.DEPTNO" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>DNAME:</label>
         <InputText @bind-Value="selected.DNAME" />
     </div>
 
-    <div>
+    <div class="form-group">
         <label>LOC:</label>
         <InputText @bind-Value="selected.LOC" />
     </div>
@@ -36,7 +37,6 @@
 
     private void Create2()
     {
-        Console.WriteLine(selected.DNAME); // 👈 prüfen!
         db.CreateDept(selected);
         NavManager.NavigateTo("/departments");
     }
