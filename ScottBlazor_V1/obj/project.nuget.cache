@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LCEuj3jqUAA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kainz\\RiderProjects\\ScottBlazor_V1\\ScottBlazor_V1\\ScottBlazor_V1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kainz\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.4\\microsoft.aspnetcore.app.internal.assets.10.0.4.nupkg.sha512",
+    "C:\\Users\\kainz\\.nuget\\packages\\mysqlconnector\\2.5.0\\mysqlconnector.2.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

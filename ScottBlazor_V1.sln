@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottBlazor_V1", "ScottBlazor_V1\ScottBlazor_V1.csproj", "{BD916079-39CF-462E-B3AD-EACA46B1518E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottDLL", "ScottDLL\ScottDLL.csproj", "{C84630D3-EE7F-4ABC-97E8-156483A90754}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD916079-39CF-462E-B3AD-EACA46B1518E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD916079-39CF-462E-B3AD-EACA46B1518E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD916079-39CF-462E-B3AD-EACA46B1518E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD916079-39CF-462E-B3AD-EACA46B1518E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84630D3-EE7F-4ABC-97E8-156483A90754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84630D3-EE7F-4ABC-97E8-156483A90754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84630D3-EE7F-4ABC-97E8-156483A90754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84630D3-EE7F-4ABC-97E8-156483A90754}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

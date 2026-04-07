@@ -1,0 +1,67 @@
+﻿@page "/departments"
+@using DBScott
+
+<PageTitle>Departments</PageTitle>
+
+<h1>Scott Departments</h1>
+
+<p>Here are the departments in Scott's company:</p>
+
+@if (departments == null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>LOC</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var dept in departments) 
+        {
+            string href = "/departments/edit/" + dept.DEPTNO;
+            <tr>
+                <td><a href=@href>Edit</a></td>    
+                
+                <td>@dept.DEPTNO</td>
+                <td>@dept.DNAME</td>
+                <td>@dept.LOC</td>
+                <td>
+                    <button class="btn btn-danger" @onclick="() => DeletDept(dept.DEPTNO)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        }
+        @code{
+            string href = "/departments/create/";
+        }
+        <button><a href=@href>Create</a></button>
+        </tbody>
+    </table>
+}
+
+@code
+{
+    private List<Dept> departments;
+    BetterDBAccess db = new BetterDBAccess();
+
+    protected override void OnInitialized()
+    {
+        departments = db.GetAllDepts();
+    }
+
+    void DeletDept(int deptno)
+    {
+        db.DeleteDept(deptno);
+        departments = db.GetAllDepts(); // Liste neu lade
+    }
+}

@@ -1,0 +1,64 @@
+﻿@page "/employees"
+@using DBScott
+
+<PageTitle>Employees</PageTitle>
+
+<h1>Scott Employees</h1>
+
+<p>Here are the employees in Scott's company:</p>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Acion</th>
+                <th>ID</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <th>PARENTID</th>
+                <th>HIREDATE</th>
+                <th>SAL</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var emp in employees) 
+        {
+            string href2 = "/employees/edit/" + emp.ID;
+            <tr>
+                <td><a href=@href2>Edit</a></td>
+                <td>@emp.ID</td>
+                <td>@emp.ENAME</td>
+                <td>@emp.JOB</td>
+                <td>@emp.ParentID</td>
+                <td>@emp.HIREDATE</td>
+                <td>@emp.SAL</td>
+                <td>@emp.COMM</td>
+                <td>@emp.DEPTID</td>
+            </tr>
+        }
+        @code{
+            string href2 = "/employees/create/";
+        }
+        <button><a href=@href2>Create</a></button>
+        </tbody>
+    </table>
+}
+
+@code
+{
+    private List<Emp> employees;
+    BettestDBAccess dba = new BettestDBAccess();
+
+    protected override void OnInitialized()
+    {
+        employees = dba.GetAllEmps();
+    }
+}

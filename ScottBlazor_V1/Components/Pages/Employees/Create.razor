@@ -1,0 +1,66 @@
+﻿@page "/employees/create"
+@using DBScott
+@inject NavigationManager NavManager
+
+<h3>Create Employee</h3>
+
+
+<EditForm Model="selected" OnValidSubmit="Create2" FormName="EmpCreateForm" Enhance>
+
+    <div class="form-group">
+        <label>Emp No:</label>
+        <InputNumber @bind-Value="selected.ID" />
+    </div>
+
+    <div class="form-group">
+        <label>Name:</label>
+        <InputText @bind-Value="selected.ENAME" />
+    </div>
+
+    <div class="form-group">
+        <label>Job:</label>
+        <InputText @bind-Value="selected.JOB" />
+    </div>
+
+    <div class="form-group">
+        <label>Manager (optional):</label>
+        <InputNumber @bind-Value="selected.ParentID" />
+    </div>
+
+    <div class="form-group">
+        <label>Hire Date:</label>
+        <InputDate @bind-Value="selected.HIREDATE" />
+    </div>
+
+    <div class="form-group">
+        <label>Salary:</label>
+        <InputNumber @bind-Value="selected.SAL" />
+    </div>
+
+    <div class="form-group">
+        <label>Commission (optional):</label>
+        <InputNumber @bind-Value="selected.COMM" />
+    </div>
+
+    <div class="form-group">
+        <label>Dept No:</label>
+        <InputNumber @bind-Value="selected.DEPTID" />
+    </div>
+
+    <button type="submit">Create</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    
+    BettestDBAccess db = new BettestDBAccess();
+    [SupplyParameterFromForm]
+    Emp selected { get; set; } = new();
+
+    private void Create2()
+    {
+        db.CreateEmp(selected);
+        NavManager.NavigateTo("/employees");
+    }
+}
