@@ -124,6 +124,11 @@ public class LINQ_PP
 
         Console.WriteLine("\n--- Übung 14: Personal der Verkaufsfiliale ---");
         PrintEmps(uebung14);
+
+        var uebung15 = emps
+            .Where(e => e.DEPTID == 30)
+            .ToList();
+            
         
         var uebung20 = emps
             .Select(e => e.JOB)
