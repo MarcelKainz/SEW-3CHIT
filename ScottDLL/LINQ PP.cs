@@ -124,11 +124,47 @@ public class LINQ_PP
 
         Console.WriteLine("\n--- Übung 14: Personal der Verkaufsfiliale ---");
         PrintEmps(uebung14);
+        
+        // var uebung15 
+        // NVL(COMM, 0) + SAL wird dann bei null Werten nicht Gesamt null
 
-        var uebung15 = emps
+        var uebung16 = emps
+            .Select(e => new {
+                e.ENAME,
+                monthly = e.SAL,
+                daily = Math.Round((decimal)(e.SAL / 22.0), 2),
+                hourly = Math.Round((decimal)(e.SAL / 22.0 / 8.0), 2)
+            })
+            .ToList();
+
+        Console.WriteLine("\n--- Übung 16: Gehaltsvariationen ---");
+        PrintEmps(uebung16);
+
+        var uebung17 = emps
+            .Sum(e => e.SAL);
+
+        Console.WriteLine("\n--- Übung 17: Gesamteinnahmen ---");
+        Console.WriteLine(uebung17);
+
+        var uebung18 = Math.Round(emps
+            .Average(e => e.COMM ?? 250), 2);
+
+        Console.WriteLine("\n--- Übung 18: Durchschnittliche Prämie bei null => 250 ---");
+        Console.WriteLine(uebung18);
+
+        var uebung19 = emps
+            .Select(e => new
+                {
+                    e.ENAME,
+                    e.DEPTID,
+                    Gehalt = e.SAL >= 0,
+                    Provision = e.COMM >= 0
+                })
             .Where(e => e.DEPTID == 30)
             .ToList();
-            
+
+        Console.WriteLine("\n--- Übung 19: Wie viele Personen bekommen in Filiale 30 ein Gehalt und wie viele eine Provision ---");
+        PrintEmps(uebung19);
         
         var uebung20 = emps
             .Select(e => e.JOB)
@@ -137,6 +173,14 @@ public class LINQ_PP
 
         Console.WriteLine("\n--- Übung 20: Anzahl verschiedener Jobs ---");
         Console.WriteLine(uebung20);
+        
+        var uebung21 = emps
+            .Select(e => e.ParentID)
+            .Where(e => e.HasValue)
+            .Distinct()
+            .ToList();
+
+        Console.WriteLine("\n--- Übung 21: Alle Vorgesetzten distinct ---");
     }
 
 
