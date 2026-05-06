@@ -1,0 +1,101 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+@implements IDisposable
+@using System.Globalization
+
+<PageTitle>Analoge Uhr</PageTitle>
+
+<h1>Analoge Uhr</h1>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 80vh;">
+<svg width="300" height="300" viewBox="0 0 300 300">
+
+    <!-- Zifferblatt -->
+    <circle cx="150" cy="150" r="145" fill="white" stroke="#333" stroke-width="6" />
+
+    <!-- Stundenzahlen -->
+    @for (int i = 1; i <= 12; i++)
+    {
+        double angle = (i * 30 - 90) * Math.PI / 180;
+        string x = (150 + 120 * Math.Cos(angle)).ToString("F2", CultureInfo.InvariantCulture);
+        string y = (150 + 120 * Math.Sin(angle)).ToString("F2", CultureInfo.InvariantCulture);
+        int number = i;
+        <svg:text x="@x" y="@y"
+                  text-anchor="middle"
+                  dominant-baseline="central"
+                  font-size="18"
+                  font-family="Arial"
+                  fill="#333">@number</svg:text>
+    }
+
+    <!-- Minutenstriche -->
+    @for (int i = 0; i < 60; i++)
+    {
+        double angle = (i * 6 - 90) * Math.PI / 180;
+        bool isHour = i % 5 == 0;
+        double innerR = isHour ? 128 : 135;
+        string x1 = (150 + innerR       * Math.Cos(angle)).ToString("F2", CultureInfo.InvariantCulture);
+        string y1 = (150 + innerR       * Math.Sin(angle)).ToString("F2", CultureInfo.InvariantCulture);
+        string x2 = (150 + 143          * Math.Cos(angle)).ToString("F2", CultureInfo.InvariantCulture);
+        string y2 = (150 + 143          * Math.Sin(angle)).ToString("F2", CultureInfo.InvariantCulture);
+        <line x1="@x1" y1="@y1" x2="@x2" y2="@y2"
+              stroke="#555"
+              stroke-width="@(isHour ? "2.5" : "1")" />
+    }
+
+    <!-- Stundenzeiger -->
+    <line x1="150" y1="150" x2="@HourX" y2="@HourY"
+          stroke="#222" stroke-width="7" stroke-linecap="round" />
+
+    <!-- Minutenzeiger -->
+    <line x1="150" y1="150" x2="@MinuteX" y2="@MinuteY"
+          stroke="#444" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Sekundenzeiger -->
+    <line x1="150" y1="150" x2="@SecondX" y2="@SecondY"
+          stroke="#e63946" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Mittelpunkt -->
+    <circle cx="150" cy="150" r="6" fill="#e63946" />
+    <circle cx="150" cy="150" r="2" fill="white" />
+
+</svg>
+
+<p role="status">@_time.ToString("HH:mm:ss")</p>
+
+</div>
+
+@code {
+    private DateTime _time = DateTime.Now;
+    private Timer? _timer;
+
+    private (double X, double Y) GetHandPos(double angleDeg, double length)
+    {
+        double rad = (angleDeg - 90) * Math.PI / 180;
+        return (150 + length * Math.Cos(rad), 150 + length * Math.Sin(rad));
+    }
+
+    private string Fmt(double v) => v.ToString("F2", CultureInfo.InvariantCulture);
+
+    private double HourAngle   => (_time.Hour % 12) * 30 + _time.Minute * 0.5 + _time.Second * (0.5 / 60);
+    private double MinuteAngle => _time.Minute * 6 + _time.Second * 0.1;
+    private double SecondAngle => _time.Second * 6;
+
+    private string HourX   => Fmt(GetHandPos(HourAngle,   80).X);
+    private string HourY   => Fmt(GetHandPos(HourAngle,   80).Y);
+    private string MinuteX => Fmt(GetHandPos(MinuteAngle, 110).X);
+    private string MinuteY => Fmt(GetHandPos(MinuteAngle, 110).Y);
+    private string SecondX => Fmt(GetHandPos(SecondAngle, 120).X);
+    private string SecondY => Fmt(GetHandPos(SecondAngle, 120).Y);
+
+    protected override void OnInitialized()
+    {
+        _timer = new Timer(_ =>
+        {
+            _time = DateTime.Now;
+            InvokeAsync(StateHasChanged);
+        }, null, 0, 1000);
+    }
+
+    public void Dispose() => _timer?.Dispose();
+}
