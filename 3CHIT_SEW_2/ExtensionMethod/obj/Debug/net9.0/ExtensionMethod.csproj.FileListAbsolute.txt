@@ -1,0 +1,15 @@
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\bin\Debug\net9.0\ExtensionMethod.exe
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\bin\Debug\net9.0\ExtensionMethod.deps.json
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\bin\Debug\net9.0\ExtensionMethod.runtimeconfig.json
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\bin\Debug\net9.0\ExtensionMethod.dll
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\bin\Debug\net9.0\ExtensionMethod.pdb
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.AssemblyInfoInputs.cache
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.AssemblyInfo.cs
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.csproj.CoreCompileInputs.cache
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.sourcelink.json
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.dll
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\refint\ExtensionMethod.dll
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.pdb
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ExtensionMethod.genruntimeconfig.cache
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\ExtensionMethod\obj\Debug\net9.0\ref\ExtensionMethod.dll

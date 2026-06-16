@@ -1,0 +1,12 @@
+﻿@using DBScott;
+
+@foreach (var item in typeof(Dept).GetProperties())
+{
+    <th>@item.Name</th>
+}
+
+
+@code {
+    //[Parameter] public Dept dept {get; set; }
+
+}

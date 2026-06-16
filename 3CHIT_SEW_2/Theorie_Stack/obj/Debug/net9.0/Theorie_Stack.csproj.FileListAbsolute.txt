@@ -1,0 +1,15 @@
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\bin\Debug\net9.0\Theorie_Stack.exe
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\bin\Debug\net9.0\Theorie_Stack.deps.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\bin\Debug\net9.0\Theorie_Stack.runtimeconfig.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\bin\Debug\net9.0\Theorie_Stack.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\bin\Debug\net9.0\Theorie_Stack.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.AssemblyInfoInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.AssemblyInfo.cs
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.csproj.CoreCompileInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.sourcelink.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\refint\Theorie_Stack.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\Theorie_Stack.genruntimeconfig.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Theorie_Stack\obj\Debug\net9.0\ref\Theorie_Stack.dll

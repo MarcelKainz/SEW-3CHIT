@@ -1,0 +1,15 @@
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\bin\Debug\net9.0\IteratorTrain.exe
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\bin\Debug\net9.0\IteratorTrain.deps.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\bin\Debug\net9.0\IteratorTrain.runtimeconfig.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\bin\Debug\net9.0\IteratorTrain.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\bin\Debug\net9.0\IteratorTrain.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.AssemblyInfoInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.AssemblyInfo.cs
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.csproj.CoreCompileInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.sourcelink.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\refint\IteratorTrain.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\IteratorTrain.genruntimeconfig.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\IteratorTrain\obj\Debug\net9.0\ref\IteratorTrain.dll

@@ -1,0 +1,70 @@
+﻿@page "/employees"
+@using DBScott
+
+<PageTitle>Employees</PageTitle>
+
+<h1>Scott Employees</h1>
+
+<p>Here are the employees in Scott's company:</p>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Edit</th>
+                <th>Delete</th>
+                <TableHeader/>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var emp in employees) 
+        {
+            string href2 = "/employees/edit/" + emp.ID;
+            <tr>
+                <td><a href=@href2>Edit</a></td>
+                <td>
+                    <button class="btn btn-danger" @onclick="() => DeleteEmp(emp.ID)">
+                        Delete
+                    </button>
+                </td>
+                <td>@emp.ID</td>
+                <td>@emp.ENAME</td>
+                <td>@emp.JOB</td>
+                <td>@emp.ParentID</td>
+                <td>@emp.HIREDATE</td>
+                <td>@emp.SAL</td>
+                <td>@emp.COMM</td>
+                <td>@emp.DEPTID</td>
+            </tr>
+        }
+        @code{
+            string href2 = "/employees/create/";
+        }
+        <button><a href=@href2>Create</a></button>
+        </tbody>
+    </table>
+}
+
+@code
+{
+    private List<Emp> employees;
+    BettestDBAccess dba = new BettestDBAccess();
+    Dept? tmp = new Dept();
+
+    protected override void OnInitialized()
+    {
+        employees = dba.GetAllEmps();
+    }
+
+    void DeleteEmp(int id)
+    {
+        dba.DeleteEmp(id);
+        employees = dba.GetAllEmps(); // Liste neu lade
+    }
+}

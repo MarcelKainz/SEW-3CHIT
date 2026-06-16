@@ -1,0 +1,15 @@
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\bin\Debug\net9.0\DoubleLinkedList.exe
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\bin\Debug\net9.0\DoubleLinkedList.deps.json
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\bin\Debug\net9.0\DoubleLinkedList.runtimeconfig.json
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\bin\Debug\net9.0\DoubleLinkedList.dll
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\bin\Debug\net9.0\DoubleLinkedList.pdb
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.AssemblyInfoInputs.cache
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.AssemblyInfo.cs
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.csproj.CoreCompileInputs.cache
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.sourcelink.json
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.dll
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\refint\DoubleLinkedList.dll
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.pdb
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\DoubleLinkedList.genruntimeconfig.cache
+C:\Users\kainz\RiderProjects\3CHIT_SEW_2\DoubleLinkedList\obj\Debug\net9.0\ref\DoubleLinkedList.dll

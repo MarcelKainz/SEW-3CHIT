@@ -1,0 +1,82 @@
+﻿@page "/employees/edit/{id:int}"
+@using DBScott
+@inject NavigationManager NavManager
+
+<h3>Edit Employee</h3>
+
+@if (selected == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <EditForm Model="selected" OnValidSubmit="Save" FormName="EmpEditForm" Enhance>
+        <input type="hidden" name="selected.ID" value="@selected.ID" />
+
+        <div class="form-group">
+            <label>Name:</label>
+            <InputText @bind-Value="selected.ENAME" />
+        </div>
+
+        <div class="form-group">
+            <label>Job:</label>
+            <InputText @bind-Value="selected.JOB" />
+        </div>
+
+        <div class="form-group">
+            <label>Manager (optional):</label>
+            <InputNumber @bind-Value="selected.ParentID" />
+        </div>
+
+        <div class="form-group">
+            <label>Hire Date:</label>
+            <InputDate @bind-Value="selected.HIREDATE" />
+        </div>
+
+        <div class="form-group">
+            <label>Salary:</label>
+            <InputNumber @bind-Value="selected.SAL" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label>Commission (optional):</label>
+            <InputNumber @bind-Value="selected.COMM" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label>Dept No:</label>
+            <InputNumber @bind-Value="selected.DEPTID" />
+        </div>
+
+        <button type="submit">Submit</button>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    
+    BettestDBAccess db = new BettestDBAccess();
+    [SupplyParameterFromForm]
+    Emp selected { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrEmpty(selected.ENAME))
+        {
+            Emp data = db.GetEmp(Id);
+            if (data != null)
+            {
+                selected = data;
+            }
+        }
+    }
+
+    private void Save()
+    {
+        db.UpdateEmp(selected);
+        NavManager.NavigateTo("/employees");
+    }
+}

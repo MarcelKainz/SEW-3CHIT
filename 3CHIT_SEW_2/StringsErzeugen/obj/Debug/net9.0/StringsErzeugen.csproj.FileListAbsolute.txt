@@ -1,0 +1,15 @@
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\bin\Debug\net9.0\StringsErzeugen.exe
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\bin\Debug\net9.0\StringsErzeugen.deps.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\bin\Debug\net9.0\StringsErzeugen.runtimeconfig.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\bin\Debug\net9.0\StringsErzeugen.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\bin\Debug\net9.0\StringsErzeugen.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.AssemblyInfoInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.AssemblyInfo.cs
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.csproj.CoreCompileInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.sourcelink.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\refint\StringsErzeugen.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\StringsErzeugen.genruntimeconfig.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\StringsErzeugen\obj\Debug\net9.0\ref\StringsErzeugen.dll

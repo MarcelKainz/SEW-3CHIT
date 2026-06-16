@@ -1,0 +1,15 @@
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\bin\Debug\net9.0\Fabrikmethode.exe
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\bin\Debug\net9.0\Fabrikmethode.deps.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\bin\Debug\net9.0\Fabrikmethode.runtimeconfig.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\bin\Debug\net9.0\Fabrikmethode.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\bin\Debug\net9.0\Fabrikmethode.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.AssemblyInfoInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.AssemblyInfo.cs
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.csproj.CoreCompileInputs.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.sourcelink.json
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\refint\Fabrikmethode.dll
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.pdb
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\Fabrikmethode.genruntimeconfig.cache
+C:\Users\keinr\SEW_3CHIT\3CHIT_SEW_2\Fabrikmethode\obj\Debug\net9.0\ref\Fabrikmethode.dll

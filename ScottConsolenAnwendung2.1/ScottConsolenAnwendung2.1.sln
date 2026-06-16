@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottDll", "ScottDll\ScottDll.csproj", "{8EFF65AE-D80B-4D9B-BB03-E19F742E9175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottVersion3", "ScottVersion3\ScottVersion3.csproj", "{12670C3F-4F61-49C3-AF34-50E45B5DC8F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottWin", "ScottWin\ScottWin.csproj", "{374914DE-B31B-413B-AC63-2233E3657171}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EFF65AE-D80B-4D9B-BB03-E19F742E9175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFF65AE-D80B-4D9B-BB03-E19F742E9175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFF65AE-D80B-4D9B-BB03-E19F742E9175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFF65AE-D80B-4D9B-BB03-E19F742E9175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12670C3F-4F61-49C3-AF34-50E45B5DC8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12670C3F-4F61-49C3-AF34-50E45B5DC8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12670C3F-4F61-49C3-AF34-50E45B5DC8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12670C3F-4F61-49C3-AF34-50E45B5DC8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{374914DE-B31B-413B-AC63-2233E3657171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374914DE-B31B-413B-AC63-2233E3657171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374914DE-B31B-413B-AC63-2233E3657171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374914DE-B31B-413B-AC63-2233E3657171}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

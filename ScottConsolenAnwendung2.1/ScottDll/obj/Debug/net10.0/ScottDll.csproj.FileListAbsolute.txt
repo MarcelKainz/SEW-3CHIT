@@ -1,0 +1,13 @@
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\bin\Debug\net10.0\ScottDll.deps.json
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\bin\Debug\net10.0\ScottDll.dll
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\bin\Debug\net10.0\ScottDll.pdb
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.csproj.AssemblyReference.cache
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.AssemblyInfoInputs.cache
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.AssemblyInfo.cs
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.csproj.CoreCompileInputs.cache
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.sourcelink.json
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.dll
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\refint\ScottDll.dll
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ScottDll.pdb
+C:\Users\kainz\RiderProjects\ScottConsolenAnwendung2.1\ScottDll\obj\Debug\net10.0\ref\ScottDll.dll
